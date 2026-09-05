@@ -1,4 +1,4 @@
-# FINAL CODE: [score_checker.py](q1/score_checker.py)
+# FINAL CODE: [score_checker.py](score_checker.py)
 ### Analysis
 ##### The input needs to be an integer, within the range 0 (the minimum value) and 100 (the maximum value.) It produces 5 different outcomes. The part that needs the boundaries is the invalid score decision, and what needs multiple decisions is the score checker itself.
 ### Flowchart:
