@@ -20,19 +20,11 @@ The program validates:
 
 # Part A
 
-| Data Captured | Expected Input | Validation Type | Invalid Input Example | Validation Rule | Error
-Message |
+
+| Data Captured | Expected Input | Validation Type | Invalid Input Example | Validation Rule | Error Message |
 |---|---|---|---|---|---|
 | Student Name | | | | | |
 | Age | | | | | |
 | Grade Level | | | | | |
 | Email Address | | | | | |
 | Registration Code | | | | | |
-
-This is a standard text sentence.
-
-| Column One | Column Two |
-| :--- | :--- |
-| Test Data 1 | Test Data 2 |
-
-This is text after the table.
