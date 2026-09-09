@@ -2,9 +2,13 @@ import time
 import random
 import math
 
+# Variables needed for loadtime
+
 randnum1 = random.uniform(1, 5)
 randnum2 = random.uniform(1, 5)
 randnum3 = random.uniform(1, 5)
+
+# Initial Loading Screen
 
 print("Pip-tan: 'Hey! Welcome back! Let me get things set up for you.'")
 print("=======================================================")
@@ -20,6 +24,8 @@ time.sleep(0.5)
 print("=======================================================")
 time.sleep(0.5)
 
+# Block 1: Name
+
 name = input("Pip-tan: 'So, what's your name?' ")
 time.sleep(0.5)
 if not name.strip():
@@ -27,6 +33,9 @@ if not name.strip():
 else:
   print("Pip-tan: 'Great!'")
 time.sleep(0.5)
+
+# Block 2: Age
+
 age = str(input("Pip-tan: 'Now, what's your age?' "))
 if age.isdigit():
     age = int(age)
@@ -37,23 +46,35 @@ if age.isdigit():
 else:
     print("Pip-tan: 'Whoops! That is not a valid age.'")
 time.sleep(0.5)
+
+# Block 3: Grade
+
 grade = int(input("Pip-tan: 'Now, what grade are you in?' "))
 if grade < 7 or grade > 12:
   print("Pip-tan: 'Whoops! That is not a valid grade.'")
 else:
   print("Pip-tan: 'Great!'")
 time.sleep(0.5)
+
+# Block 4: Email
+
 email = input("Pip-tan: 'Now, what's your e-mail address?' ")
 if "@" in email:
   print("Pip-tan: 'Great!'")
 else:
   print("Pip-tan: 'Whoops! That is not a valid e-mail address.'")
 time.sleep(0.5)
+
+# Block 5: Registration Code
+
 code = input("Pip-tan: 'Now, what's your registation code?' ")
 if len(code) == 6:
   print("Pip-tan: 'Great!'")
 else:
   print("Pip-tan: 'Whoops! That is not a valid registration code.'")
+
+# The following code is the validation determiner system.
+
 has_invalid_input = False
 if not len(code) == 6:
     has_invalid_input = True
@@ -66,6 +87,9 @@ if not str(name) == name.strip():
 if "@" not in str(email):
     has_invalid_input = True
 time.sleep(1)
+
+# Second Loading screen
+
 print("=======================================================")
 time.sleep(0.5)
 print()
@@ -78,6 +102,9 @@ print()
 time.sleep(0.5)
 print("=======================================================")
 time.sleep(0.5)
+
+# Determiner output
+
 if has_invalid_input:
     print("Pip-tan: 'Registration failed. One or more inputs were invalid.'")
 else:
@@ -95,6 +122,9 @@ REGISTRATION ACCEPTED!
   time.sleep(0.5)
   print(f"Registration Code: {code}")
 time.sleep(1)
+
+#Final clearing screen
+
 print("=============================================================")
 time.sleep(0.5)
 print()
