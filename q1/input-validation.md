@@ -455,13 +455,17 @@ print("=============================================================")
 # Part D - Testing
 | Test | Input / Condition | Validation Being Tested | Expected Output | Actual Output | Result |
 |---:|---|---|---|---|---|
-| 1 | All inputs valid | Normal case | | | |
-| 2 | Blank student name | Presence | | | |
-| 3 | Age = `fourteen` | Data type | | | |
-| 4 | Age = `11` | Minimum boundary | | | |
-| 5 | Age = `18` | Maximum boundary | | | |
-| 6 | Age = `10` | Range | | | |
-| 7 | Grade Level = `13` | Acceptable value | | | |
-| 8 | Email = `studentpshs.edu.ph` | Pattern | | | |
-| 9 | Registration Code = `ABC` | Length | | | |
-| 10 | Registration Code = `CS2026` | Valid length | | | |
+| 1 | All inputs valid | Normal case |Registration end message|Registration end message| PASS |
+| 2 | Blank student name | Presence |Fail message/invalid message/end message|Fail message/invalid message/end message| PASS |
+| 3 | Age = `fourteen` | Data type | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
+| 4 | Age = `11` | Minimum boundary | Success message | Success message | PASS |
+| 5 | Age = `18` | Maximum boundary | Success message | Success message | PASS |
+| 6 | Age = `10` | Range | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
+| 7 | Grade Level = `13` | Acceptable value | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
+| 8 | Email = `studentpshs.edu.ph` | Pattern | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
+| 9 | Registration Code = `ABC` | Length | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
+| 10 | Registration Code = `CS2026` | Valid length | Success message | Success message | PASS |
+
+---
+
+# Part E: Output Verification
