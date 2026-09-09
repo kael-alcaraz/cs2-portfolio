@@ -28,3 +28,11 @@ Message |
 | Grade Level | | | | | |
 | Email Address | | | | | |
 | Registration Code | | | | | |
+
+This is a standard text sentence.
+
+| Column One | Column Two |
+| :--- | :--- |
+| Test Data 1 | Test Data 2 |
+
+This is text after the table.
