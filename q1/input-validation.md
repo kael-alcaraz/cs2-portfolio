@@ -23,7 +23,7 @@ The program validates:
 
 | Data Captured | Expected Input | Validation Type | Invalid Input Example | Validation Rule | Error Message |
 |---|---|---|---|---|---|
-| Student Name | | | | | |
+| Student Name |Non-empty string|Presence check|" "|There should be the presence of a character|"Pip-tan: 'Whoops! That's an invalid name. Goodbye!'"|
 | Age | | | | | |
 | Grade Level | | | | | |
 | Email Address | | | | | |
