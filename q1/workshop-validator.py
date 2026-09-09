@@ -28,6 +28,9 @@ time.sleep(0.5)
 # Block 1: Name
 
 name = input("Pip-tan: 'So, what's your name?' ")
+if name.strip() == ".quit":
+    print("Pip-tan: 'Goodbye!'")
+    sys.exit(0)
 time.sleep(0.5)
 if not name.strip():
   print("Pip-tan: 'Whoops! That isn't a valid name. Goodbye!'")
@@ -39,6 +42,9 @@ time.sleep(0.5)
 # Block 2: Age
 
 age = str(input("Pip-tan: 'Now, what's your age?' "))
+if age.strip() == ".quit":
+    print("Pip-tan: 'Goodbye!'")
+    sys.exit(0)
 if age.isdigit():
     age = int(age)
     if age < 11 or age > 18:
@@ -53,7 +59,16 @@ time.sleep(0.5)
 
 # Block 3: Grade
 
-grade = int(input("Pip-tan: 'Now, what grade are you in?' "))
+grade_input = input("Pip-tan: 'Now, what grade are you in?' ")
+if grade_input.strip() == ".quit":
+    print("Pip-tan: 'Goodbye!'")
+    sys.exit(0)
+# Safely handle the conversion to avoid internal crashes on bad inputs
+try:
+    grade = int(grade_input)
+except ValueError:
+    grade = 0 # Fallback so the downstream logic catches the validation error cleanly
+
 if grade < 7 or grade > 12:
   print("Pip-tan: 'Whoops! That is not a valid grade. Goodbye!'")
   sys.exit(1)
@@ -64,6 +79,9 @@ time.sleep(0.5)
 # Block 4: Email
 
 email = input("Pip-tan: 'Now, what's your e-mail address?' ")
+if email.strip() == ".quit":
+    print("Pip-tan: 'Goodbye!'")
+    sys.exit(0)
 if "@" in email:
   print("Pip-tan: 'Great!'")
 else:
@@ -74,6 +92,9 @@ time.sleep(0.5)
 # Block 5: Registration Code
 
 code = input("Pip-tan: 'Now, what's your registation code?' ")
+if code.strip() == ".quit":
+    print("Pip-tan: 'Goodbye!'")
+    sys.exit(0)
 if len(code) == 6:
   print("Pip-tan: 'Great!'")
 else:
@@ -137,7 +158,7 @@ time.sleep(0.5)
 print()
 time.sleep(0.5)
 print("Tidying up...")
-time.sleep(randnum3)
+time.sleep(randnum3) 
 print(f"Done! [Tidied up for {math.ceil(randnum3)} se-")
 print("Pip-tan: 'Wait!'")
 time.sleep(0.5)
