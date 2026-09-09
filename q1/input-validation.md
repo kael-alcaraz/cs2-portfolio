@@ -250,7 +250,7 @@ END
 ## Programming Language
 > Python
 ## Source Code File
-> [`workshp-validator.py`](workshop-validator.py)
+> [`workshop-validator.py`](workshop-validator.py)
 ## Final Code
 ``` python
 import time
@@ -469,3 +469,83 @@ print("=============================================================")
 ---
 
 # Part E: Output Verification
+
+## Verification Test 1
+**INPUT**
+``` text
+student.pshs.edu.ph
+```
+**EXPECTED OUTPUT**
+``` text
+"Pip-tan: 'Whoops! That is not a valid e-mail address. Goodbye!'"
+```
+**ACTUAL OUTPUT**
+``` text
+"Pip-tan: 'Whoops! That is not a valid e-mail address. Goodbye!'"
+```
+**Result:** **PASS**
+**EXPLANATION**
+> It passed, as the expectations met reality. It passed because the rule of having "@" in the sentence prevented it from success.
+
+## Verification Test 2
+**INPUT**
+``` text
+13
+```
+**EXPECTED OUTPUT**
+``` text
+"Pip-tan: 'Whoops! That is not a valid grade level. Goodbye!'"
+```
+**ACTUAL OUTPUT**
+``` text
+"Pip-tan: 'Whoops! That is not a valid grade level. Goodbye!'"
+```
+**Result:** **PASS**
+**EXPLANATION**
+> It passed, as the expectations met reality. It passed, as the range only goes up to 12, which means 13 is excluded.
+
+## Verification Test 3
+**INPUT**
+``` text
+fourteen
+```
+**EXPECTED OUTPUT**
+``` text
+"Pip-tan: 'Whoops! That is not a valid age. Goodbye!'"
+```
+**ACTUAL OUTPUT**
+``` text
+"Pip-tan: 'Whoops! That is not a valid age. Goodbye!'"
+```
+**Result:** **PASS**
+**EXPLANATION**
+> It passed, as the expectations met reality. It passed, as the datatype stored is an integer, and since "fourteen" is a string, it didn't pass through.
+
+---
+
+# Reflection
+
+### 1. Why should a program validate input before processing it?
+> So that it is easier to process, and that there are no uncesessary information left.
+
+### 2. What is the difference between input validation and output verification?
+> Input validation makes sure the output is correct, and output verification is to make sure the input is correct.
+
+### 3. Which validation technique was easiest for you to implement? Why?
+> The length validation technique, as it already exists as the function len().
+
+### 4. Which validation technique was most challenging? Why?
+> The presence technique but for the name, as it required a nested if statement.
+
+### 5. How did testing invalid inputs help you improve your program?
+> It showed me what inputs were going wrong, and to fix it, to improe the work.
+
+---
+
+# Files for this activity
+- [`workshop-validator.py`](workshop-validator.py)
+- `input-validation.md`
+  
+---
+
+## [<-- psst, here's a link to go back to the main portfolio](../README.md)
