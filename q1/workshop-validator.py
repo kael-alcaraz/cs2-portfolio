@@ -1,6 +1,7 @@
 import time
 import random
 import math
+import sys
 
 # Variables needed for loadtime
 
@@ -29,7 +30,8 @@ time.sleep(0.5)
 name = input("Pip-tan: 'So, what's your name?' ")
 time.sleep(0.5)
 if not name.strip():
-  print("Pip-tan: 'Whoops! That isn't a valid name.'")
+  print("Pip-tan: 'Whoops! That isn't a valid name. Goodbye!'")
+  sys.exit(1)
 else:
   print("Pip-tan: 'Great!'")
 time.sleep(0.5)
@@ -40,18 +42,21 @@ age = str(input("Pip-tan: 'Now, what's your age?' "))
 if age.isdigit():
     age = int(age)
     if age < 11 or age > 18:
-        print("Pip-tan: Whoops! That is not a valid age.")
+        print("Pip-tan: Whoops! That is not a valid age. Goodbye!")
+        sys.exit(1)
     else:
         print("Pip-tan: Great!")
 else:
-    print("Pip-tan: 'Whoops! That is not a valid age.'")
+    print("Pip-tan: 'Whoops! That is not a valid age. Goodbye!'")
+    sys.exit(1)
 time.sleep(0.5)
 
 # Block 3: Grade
 
 grade = int(input("Pip-tan: 'Now, what grade are you in?' "))
 if grade < 7 or grade > 12:
-  print("Pip-tan: 'Whoops! That is not a valid grade.'")
+  print("Pip-tan: 'Whoops! That is not a valid grade. Goodbye!'")
+  sys.exit(1)
 else:
   print("Pip-tan: 'Great!'")
 time.sleep(0.5)
@@ -62,7 +67,8 @@ email = input("Pip-tan: 'Now, what's your e-mail address?' ")
 if "@" in email:
   print("Pip-tan: 'Great!'")
 else:
-  print("Pip-tan: 'Whoops! That is not a valid e-mail address.'")
+  print("Pip-tan: 'Whoops! That is not a valid e-mail address. Goodbye!'")
+  sys.exit(1)
 time.sleep(0.5)
 
 # Block 5: Registration Code
@@ -71,7 +77,8 @@ code = input("Pip-tan: 'Now, what's your registation code?' ")
 if len(code) == 6:
   print("Pip-tan: 'Great!'")
 else:
-  print("Pip-tan: 'Whoops! That is not a valid registration code.'")
+  print("Pip-tan: 'Whoops! That is not a valid registration code. Goodbye!'")
+  sys.exit(1)
 
 # The following code is the validation determiner system.
 
