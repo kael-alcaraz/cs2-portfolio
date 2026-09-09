@@ -19,6 +19,7 @@ The program validates:
 ---
 
 # Part A
+
 | Data Captured | Expected Input | Validation Type | Invalid Input Example | Validation Rule | Error
 Message |
 |---|---|---|---|---|---|
