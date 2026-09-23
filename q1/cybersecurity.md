@@ -46,18 +46,18 @@ Check all that apply:
 
 # Part B
 
-
 | Data | Collect/Do Not Collect | Reason |
 |---|---|---|
 | Student Name | Collect | The club needs to know who the person is. |
 | Section | Collect | The club needs to search for the person, and in the section is best. |
 | Club Choice | Collect | The system needs to know what club the student wants to join. |
 | Email Address | Collect | For easy contact. |
-| Attendance status | Collect | To know whether or not the student was  actually there. |
+| Attendance status | Collect | To know whether or not the student was actually there. |
 | Password | Do not Collect | The system does not need to log in to the person's email. |
-| OTP | Do not Collect | The system does not need an OTP to log in, thus deeming this unnecessesary. |
-| Home Address | Do not Collect | A club does not need to know where a  student goes home to. |
+| OTP | Do not Collect | The system does not need an OTP to log in, thus deeming this unnecessary. |
+| Home Address | Do not Collect | A club does not need to know where a student goes home to. |
 | Parent Bank Account | Do not Collect | The system does not need to know where a student gets money from. |
+
 
 <hr width="15%">
 
