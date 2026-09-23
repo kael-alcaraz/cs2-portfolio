@@ -99,7 +99,7 @@ Check all that apply:
 > [`secure_registration.py`](secure_registration.py)
 ## Final Code
 
-```python
+~~~python
 import time
 import random
 import math
@@ -266,7 +266,8 @@ print(f"Done! [Tidied up for {math.ceil(randnum3)} seconds.]")
 time.sleep(0.5)
 print()
 time.sleep(0.5)
-print("=============================================================")```
+print("=============================================================")
+~~~
 
 ---
 
