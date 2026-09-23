@@ -71,7 +71,7 @@ Check all that apply:
 
 | Data Captured | Expected Input | Possible Risk | Invalid Input Example | Validation Rule | Error
 Message |
-|---|---|---|---|---|---|
+|---:|---|---|---|---|---|
 | Student Name | Anything with characters | None | " " | There must be a character in the input | Pip-tan: 'Whoops! That isn't a valid name. Goodbye!' |
 | Section | A section in the list of sections | None | Kamia | The input must be in the list "sectionlist." | Pip-tan: 'Whoops! That entry, {section}, is not a valid section. Goodbye!' |
 | Club Choice | A club in the list of clubs given | There may be other clubs to be put, yet the only ones provided are counted. | Gaming | The input must be in the list "clublist." | Pip-tan: 'Whoops! That entry, {club}, is not a valid club. Goodbye!' |
