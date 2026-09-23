@@ -14,8 +14,8 @@ It identifies if inputs are necessary and correct.
 
 # Part A - Cybersecurity Threat Analysis
 ## Assigned Case
-**Case Number:** 2
-**Case Title:** Fake Prize
+### **Case Number:** 2
+### **Case Title:** Fake Prize
 > A student supposedly wins a prize, yet they must provide personal and payment info.
 
 <hr width="15%">
@@ -104,7 +104,7 @@ time.sleep(0.5)
 # Block 1: Name
 
 name = input("Pip-tan: 'So, what's your name?' ")
-if name.strip() == ".quit":
+if name.strip() == "quit":
     print("Pip-tan: 'Goodbye!'")
     sys.exit(0)
 time.sleep(0.5)
@@ -115,38 +115,31 @@ else:
   print("Pip-tan: 'Great!'")
 time.sleep(0.5)
 
-# Block 2: Age
+# Block 2: Section
 
-age = str(input("Pip-tan: 'Now, what's your age?' "))
-if age.strip() == ".quit":
+section = str(input("Pip-tan: 'Now, what's your section?' ")).capitalize()
+sectionlist = ["Diamond", "Emerald", "Jade", "Sapphire", "Dahlia", "Ilang-Ilang", "Rosal", "Sampaguita", "Beryllium", "Magnesium", "Platinum", "Silicon", "Electron", "Gluon", "Graviton", "Photon", "Biology", "Biochemistry", "Chemistry", "Physics"]
+if section.strip() == "quit":
     print("Pip-tan: 'Goodbye!'")
     sys.exit(0)
-if age.isdigit():
-    age = int(age)
-    if age < 11 or age > 18:
-        print("Pip-tan: Whoops! That is not a valid age. Goodbye!")
+if section not in sectionlist:
+        print(f"Pip-tan: Whoops! That entry, {section}, is not a valid section. Goodbye!")
         sys.exit(1)
-    else:
-        print("Pip-tan: Great!")
 else:
-    print("Pip-tan: 'Whoops! That is not a valid age. Goodbye!'")
-    sys.exit(1)
+        print("Pip-tan: Great!")
 time.sleep(0.5)
 
-# Block 3: Grade
+# Block 3: Club
 
-grade_input = input("Pip-tan: 'Now, what grade are you in?' ")
-if grade_input.strip() == ".quit":
+club = input("Pip-tan: 'Now, what club do you want to join?' ").capitalize()
+clublist = ["Robotics", "Science", "Mathematics", "Programming"]
+if club.strip() == "quit":
     print("Pip-tan: 'Goodbye!'")
     sys.exit(0)
 # Safely handle the conversion to avoid internal crashes on bad inputs
-try:
-    grade = int(grade_input)
-except ValueError:
-    grade = 0 # Fallback so the downstream logic catches the validation error cleanly
 
-if grade < 7 or grade > 12:
-  print("Pip-tan: 'Whoops! That is not a valid grade. Goodbye!'")
+if club not in clublist:
+  print(f"Pip-tan: 'Whoops! That entry, {club}, is not a valid club. Goodbye!'")
   sys.exit(1)
 else:
   print("Pip-tan: 'Great!'")
@@ -158,37 +151,38 @@ email = input("Pip-tan: 'Now, what's your e-mail address?' ")
 if email.strip() == ".quit":
     print("Pip-tan: 'Goodbye!'")
     sys.exit(0)
-if "@" in email:
+if "@" in email and "." in email:
   print("Pip-tan: 'Great!'")
 else:
-  print("Pip-tan: 'Whoops! That is not a valid e-mail address. Goodbye!'")
+  print(f"Pip-tan: 'Whoops! That entry, {email}, is not a valid e-mail address. Goodbye!'")
   sys.exit(1)
 time.sleep(0.5)
 
-# Block 5: Registration Code
+# Block 5: Attendance Status
 
-code = input("Pip-tan: 'Now, what's your registation code?' ")
-if code.strip() == ".quit":
+attendance = input("Pip-tan: 'Now, what's your attendance status?' ").capitalize()
+attstatlist = ["Present", "Absent", "Late"]
+if attendance.strip() == "quit":
     print("Pip-tan: 'Goodbye!'")
     sys.exit(0)
-if len(code) == 6:
+if attendance in attstatlist:
   print("Pip-tan: 'Great!'")
 else:
-  print("Pip-tan: 'Whoops! That is not a valid registration code. Goodbye!'")
+  print(f"Pip-tan: 'Whoops! That entry, {attendance}, is not a valid attendance status. Goodbye!'")
   sys.exit(1)
 
 # The following code is the validation determiner system.
 
 has_invalid_input = False
-if not len(code) == 6:
+if club not in clublist:
     has_invalid_input = True
-if int(age) < 11 or int(age) > 18:
+if attendance not in attstatlist:
     has_invalid_input = True
-if int(grade) < 7 or int(grade) > 12:
+if section not in sectionlist:
     has_invalid_input = True
 if not str(name) == name.strip():
     has_invalid_input = True
-if "@" not in str(email):
+if "@" not in str(email) and "." not in str(email):
     has_invalid_input = True
 time.sleep(1)
 
@@ -218,13 +212,13 @@ REGISTRATION ACCEPTED!
   time.sleep(0.5)
   print(f"Name: {name}")
   time.sleep(0.5)
-  print(f"Age: {age}")
+  print(f"Section: {section}")
   time.sleep(0.5)
-  print(f"Grade Level: {grade}")
+  print(f"Club: {club}")
   time.sleep(0.5)
   print(f"Email: {email}")
   time.sleep(0.5)
-  print(f"Registration Code: {code}")
+  print(f"Attendance: {attendance}")
 time.sleep(1)
 
 #Final clearing screen
@@ -238,7 +232,7 @@ time.sleep(randnum3)
 print(f"Done! [Tidied up for {math.ceil(randnum3)} se-")
 print("Pip-tan: 'Wait!'")
 time.sleep(0.5)
-print("Pip-tan: 'Goodbye, and thank you for using the Workshop Registration Validation site! <3'")
+print("Pip-tan: 'Goodbye, and thank you for using the Club Registration site! <3'")
 time.sleep(0.5)
 print("Tidying up... (again)")
 time.sleep(randnum2)
@@ -246,8 +240,7 @@ print(f"Done! [Tidied up for {math.ceil(randnum3)} seconds.]")
 time.sleep(0.5)
 print()
 time.sleep(0.5)
-print("=============================================================")
-```
+print("=============================================================")```
 
 ---
 
