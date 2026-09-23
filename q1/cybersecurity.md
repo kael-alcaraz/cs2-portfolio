@@ -67,6 +67,32 @@ Check all that apply:
 
 ---
 
+# Part C: Security-Focused Validation Rules
+
+| Data Captured | Expected Input | Possible Risk | Invalid Input Example | Validation Rule | Error
+Message |
+|---|---|---|---|---|---|
+| Student Name | Anything with characters | None | " " | There must be a character in the input | Pip-tan: 'Whoops! That isn't a valid name. Goodbye!' |
+| Section | A section in the list of sections | None | Kamia | The input must be in the list "sectionlist." | Pip-tan: 'Whoops! That entry, {section}, is not a valid section. Goodbye!' |
+| Club Choice | A club in the list of clubs given | There may be other clubs to be put, yet the only ones provided are counted. | Gaming | The input must be in the list "clublist." | Pip-tan: 'Whoops! That entry, {club}, is not a valid club. Goodbye!' |
+| School Email | An email with the characters "@" and "." | None | student.pshs.brc | Input must have the characters "@" and "." | Pip-tan: 'Whoops! That entry, {email}, is not a valid e-mail address. Goodbye!' |
+| Attendance Status | A status in the list of attendance statuses | None | Gone | Input must be in the list "attstatlist." | Pip-tan: 'Whoops! That entry, {attendance}, is not a valid attendance status. Goodbye!' |
+
+<hr width="15%">
+
+## Secure Data Capture Questions
+
+### 1. What should your program accept?
+> Valid, correct, necessary answers.
+
+### 2. What should your program reject?
+> Invalid, wrong, unnecessaty answers.
+
+### 3. How do your validation rules help reduce incorrect and unsafe input?
+>By putting strict rules on what is to be inputted.
+
+---
+
 # Part D: Secure Program Implementation
 ## Programming Language
 > Python
@@ -123,7 +149,7 @@ if section.strip() == "quit":
     print("Pip-tan: 'Goodbye!'")
     sys.exit(0)
 if section not in sectionlist:
-        print(f"Pip-tan: Whoops! That entry, {section}, is not a valid section. Goodbye!")
+        print(f"Pip-tan: 'Whoops! That entry, {section}, is not a valid section. Goodbye!'")
         sys.exit(1)
 else:
         print("Pip-tan: Great!")
@@ -246,119 +272,60 @@ print("=============================================================")```
 
 ## Security Practices Applied
 
-### Presence Validation
-> Name and email validators.
+### Required Input
+> Using .strip() to scan for blank inputs.
 
-### Data Type Validation
-> Age and grade validators.
+### Allowed Values
+> Section, Club, and Attendance Status validators.
 
-### Range Validation
-> Age and grade validators.
+### Format Check
+> Using if "@" not in email and "." not in email.
 
-### Acceptable Value Validation
-> Age and Grade validators.
+### Error Messages
+> So that we know where you went wrong.
 
-### Pattern Validation
-> The string must contain "@".
-> Email validators.
-
-### Length Validation
-> The length must be 6.
-> Registration code validators.
-
-# Part D - Testing
-| Test | Input / Condition | Validation Being Tested | Expected Output | Actual Output | Result |
-|---:|---|---|---|---|---|
-| 1 | All inputs valid | Normal case |Registration end message|Registration end message| PASS |
-| 2 | Blank student name | Presence |Fail message/invalid message/end message|Fail message/invalid message/end message| PASS |
-| 3 | Age = `fourteen` | Data type | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
-| 4 | Age = `11` | Minimum boundary | Success message | Success message | PASS |
-| 5 | Age = `18` | Maximum boundary | Success message | Success message | PASS |
-| 6 | Age = `10` | Range | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
-| 7 | Grade Level = `13` | Acceptable value | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
-| 8 | Email = `studentpshs.edu.ph` | Pattern | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
-| 9 | Registration Code = `ABC` | Length | Fail message/invalid message/end message | Fail message/invalid message/end message | PASS |
-| 10 | Registration Code = `CS2026` | Valid length | Success message | Success message | PASS |
+### Data Minimization
+> OTPs, Passwords, Home adresses, bank accounts.
+> These are unnecessary and personal. Better not to use such as it would make it more suspicious
 
 ---
 
-# Part E: Output Verification
+# Part E - Testing and Reflection
+| Test | Input Situation | Expected Output | Actual Output | Result |
+|---:|---|---|---|---|
+| 1 | All data valid | Registered message | Registered message | **PASS** |
+| 2 | Blank student name | Error message | Error message | **PASS** |
+| 3 | Invalid section | Error message | Error message | **PASS** |
+| 4 | Invalid club choice | Error message | Error message | **PASS** |
+| 5 | Email missing `@` | Error message | Error message | **PASS** |
+| 6 | Email missing `.` | Error message | Error message | **PASS** |
+| 7 | Invalid attendance status | Error message | Error message | **PASS** |
+| 8 | Different valid inputs | Registered message | Registered message | **PASS** |
 
-## Verification Test 1
-**INPUT**
-``` text
-student.pshs.edu.ph
-```
-**EXPECTED OUTPUT**
-``` text
-"Pip-tan: 'Whoops! That is not a valid e-mail address. Goodbye!'"
-```
-**ACTUAL OUTPUT**
-``` text
-"Pip-tan: 'Whoops! That is not a valid e-mail address. Goodbye!'"
-```
-**Result:** **PASS**
-**EXPLANATION**
-> It passed, as the expectations met reality. It passed because the rule of having "@" in the sentence prevented it from success.
-
-## Verification Test 2
-**INPUT**
-``` text
-13
-```
-**EXPECTED OUTPUT**
-``` text
-"Pip-tan: 'Whoops! That is not a valid grade level. Goodbye!'"
-```
-**ACTUAL OUTPUT**
-``` text
-"Pip-tan: 'Whoops! That is not a valid grade level. Goodbye!'"
-```
-**Result:** **PASS**
-**EXPLANATION**
-> It passed, as the expectations met reality. It passed, as the range only goes up to 12, which means 13 is excluded.
-
-## Verification Test 3
-**INPUT**
-``` text
-fourteen
-```
-**EXPECTED OUTPUT**
-``` text
-"Pip-tan: 'Whoops! That is not a valid age. Goodbye!'"
-```
-**ACTUAL OUTPUT**
-``` text
-"Pip-tan: 'Whoops! That is not a valid age. Goodbye!'"
-```
-**Result:** **PASS**
-**EXPLANATION**
-> It passed, as the expectations met reality. It passed, as the datatype stored is an integer, and since "fourteen" is a string, it didn't pass through.
-
----
+<hr width="15%">
 
 # Reflection
 
-### 1. Why should a program validate input before processing it?
-> So that it is easier to process, and that there are no uncesessary information left.
+### 1. What is one cybersecurity threat that can affect an application or user?
+> Phishing is an example of a cybersecurity threat that affects users.
 
-### 2. What is the difference between input validation and output verification?
-> Input validation makes sure the output is correct, and output verification is to make sure the input is correct.
+### 2. How can users reduce the risk of phishing or suspicious messages?
+> Not clicking on suspicous links and not interacting with suspicious internet items.
 
-### 3. Which validation technique was easiest for you to implement? Why?
-> The length validation technique, as it already exists as the function len().
+### 3. How can validation rules improve the security of user input?
+> It dfends extra because the inputs are from small sets that are not known to users.
 
-### 4. Which validation technique was most challenging? Why?
-> The presence technique but for the name, as it required a nested if statement.
+### 4. Why should a aprogram avoid collecting unnecessary personal information?
+> To make the digital world a safer place, and to defend personal information more by not sharing it outside.
 
-### 5. How did testing invalid inputs help you improve your program?
-> It showed me what inputs were going wrong, and to fix it, to improe the work.
+### 5. How SG7's input validation concepts become security practices in SG8?
+> Input validation is very good as security, as it provides small sets to work on. Removing incorrect or invalid information makes a program more secure.
 
 ---
 
 # Files for this activity
-- [`workshop-validator.py`](workshop-validator.py)
-- `input-validation.md`
+- [`secure_registration.py`](secure_registration.py)
+- `cybersecurity.md`
 
 ---
 
