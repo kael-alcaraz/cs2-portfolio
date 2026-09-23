@@ -98,7 +98,7 @@ Check all that apply:
 ## Source Code File
 > [`secure_registration.py`](secure_registration.py)
 ## Final Code
-``` python
+```python
 import time
 import random
 import math
