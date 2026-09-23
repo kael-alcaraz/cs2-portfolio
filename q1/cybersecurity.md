@@ -67,11 +67,11 @@ Check all that apply:
 
 ---
 
-# Part C: Program Implementation
+# Part D: Secure Program Implementation
 ## Programming Language
 > Python
 ## Source Code File
-> [`workshop-validator.py`](workshop-validator.py)
+> [`secure_registration.py`](secure_registration.py)
 ## Final Code
 ``` python
 import time
@@ -244,7 +244,7 @@ print("=============================================================")```
 
 ---
 
-## Validation Techniques Used
+## Security Practices Applied
 
 ### Presence Validation
 > Name and email validators.
