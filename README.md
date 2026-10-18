@@ -2,6 +2,9 @@
 ## Kael Dominic V. Alcaraz
 ## 8-Dahlia
 # All links for submission below:
+
+<p align="center"> ❖  ◦  ❖  ◦  ❖ </p>
+
 > ### [Quarter 1:](q1/README.md)
 > - [Alcaraz_KaelDominic_Distance.py](q1/Alcaraz_KaelDominic_Distance.py)
 > - [hello.py](q1/hello.py)
@@ -9,5 +12,7 @@
 > - [workshop-validator.py](q1/workshop-validator.py) and [input-validation.md](q1/input-validation.md)
 > - [secure_registration.py](q1/secure_registration.py) and [cybersecurity.md](q1/cybersecurity.md)
 
-> ### [Quarter 2:](q2/readme.md
+<p align="center"> ❖  ◦  ❖  ◦  ❖ </p>
+
+> ### [Quarter 2:](q2/readme.md)
 > - [canteen_purchase_calc.py](q2/canteen_purchase_calc.py)
