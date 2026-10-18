@@ -5,7 +5,7 @@
 
 <p align="center" style="vertical-align: middle; font-size: 24px; font-weight: bold;">
   ==================== 
-  <img src="https://polygon.com" width="35" style="vertical-align: middle; margin: 0 10px;" alt="Project Sekai Crystal"> 
+  <img src="https://www.reddit.com/r/UmaMusume/comments/1tp32vs/would_you_rather_have_80k_carats_or_dinner_with/" width="35" style="vertical-align: middle; margin: 0 10px;" alt="Umamusume: Pretty Derby Carat"> 
   ====================
 </p>
 
