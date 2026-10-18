@@ -17,7 +17,11 @@
 > - [workshop-validator.py](q1/workshop-validator.py) and [input-validation.md](q1/input-validation.md)
 > - [secure_registration.py](q1/secure_registration.py) and [cybersecurity.md](q1/cybersecurity.md)
 
-<p align="center"> ❖  ◦  ❖  ◦  ❖ </p>
+<p align="center" style="vertical-align: middle; font-size: 24px; font-weight: bold;">
+  ==================== 
+  <img src="images/carat.png" width="35" style="vertical-align: middle; margin: 0 10px;" alt="Umamusume: Pretty Derby Carat"> 
+  ====================
+</p>
 
 > ### [Quarter 2:](q2/readme.md)
 > - [canteen_purchase_calc.py](q2/canteen_purchase_calc.py)
