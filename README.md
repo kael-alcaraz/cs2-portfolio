@@ -3,7 +3,12 @@
 ## 8-Dahlia
 # All links for submission below:
 
-<p align="center"> ❖  ◦  ❖  ◦  ❖ </p>
+<p align="center" style="vertical-align: middle; font-size: 24px; font-weight: bold;">
+  ==================== 
+  <img src="https://polygon.com" width="35" style="vertical-align: middle; margin: 0 10px;" alt="Project Sekai Crystal"> 
+  ====================
+</p>
+
 
 > ### [Quarter 1:](q1/README.md)
 > - [Alcaraz_KaelDominic_Distance.py](q1/Alcaraz_KaelDominic_Distance.py)
