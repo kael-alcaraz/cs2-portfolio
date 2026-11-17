@@ -26,3 +26,4 @@
 > ### [Quarter 2:](q2/readme.md)
 > - [canteen_purchase_calc.py](q2/canteen_purchase_calc.py)
 > - [student_performance_calc.py](q2/student_performance_calculator.py)
+> - [-> Google Classroom Programming Exercises](q2/programming-challenges)
